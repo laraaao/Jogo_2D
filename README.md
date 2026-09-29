@@ -12,3 +12,6 @@ hoje arrumamos o pulo, fazendo ele deixar de ser infinito e colocamos a camera p
 
 24/09/26
 Hoje mexemos apenas na parte do mapa do nosso jogo. Fiz um esqueleto com quadrados e circulos de como vai funcionar o meu cenário, não finalizei todas as partes do jogo, mas estou perto. Grande parte será feita com desenhos feitos a mão.
+
+29/09/26 
+Hoje eu finalizei o mapa do meu jogo e aprendi como utilizar as prefabs para facilitar o desenvolvimento. Também adicionamos a programação de dano e os obstáculos, no meu jogo os obstáculos sao triangulos e estao na parte da floresta ate chegar na cabana.
