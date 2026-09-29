@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PLAYER : MonoBehaviour
 {
@@ -24,7 +26,7 @@ public class PLAYER : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse); // vai gerar o pulo 
+            rb.AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse); // vai gerar o pulo 
         }
     }
 
@@ -34,13 +36,20 @@ public class PLAYER : MonoBehaviour
         {
             isGrounded = true; // vai reconhecer quando o jogador estiver encostando no chao
         }
-     }
+
+        if (collision.gameObject.CompareTag("dano")) 
+        {
+            SceneManager.LoadScene(0); // vai fazer o player voltar para o inicio apos tocar o inimigo
+        }
+
+     } 
+
 
      void OnCollisionExit2D(Collision2D collision)
      {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = false; //vai reconhecer quando o jogador nao estiver de encostando no chao
+            isGrounded = false; //vai reconhecer quando o jogador nao estiver encostando no chao
         }
      }
 
