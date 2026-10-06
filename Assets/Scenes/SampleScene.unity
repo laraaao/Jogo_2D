@@ -742,9 +742,10 @@ GameObject:
   - component: {fileID: 218716162}
   - component: {fileID: 218716161}
   - component: {fileID: 218716160}
+  - component: {fileID: 218716163}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Jogador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -909,7 +910,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe8ae376bfc8c44b8ac702aacebb061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
+--- !u!114 &218716163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218716157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857d34041b57a71429ea0ab6204bc0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 4
+  forcaDoPulo: 3
+  velocidadeDash: 15
+  duracaoDash: 0.2
+  cooldownDash: 1
 --- !u!1001 &235134533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4125,7 +4143,7 @@ GameObject:
   - component: {fileID: 1138435297}
   - component: {fileID: 1138435299}
   - component: {fileID: 1138435298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabana
   m_TagString: Ground
   m_Icon: {fileID: 0}
