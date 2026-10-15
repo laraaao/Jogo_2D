@@ -15,3 +15,8 @@ Hoje mexemos apenas na parte do mapa do nosso jogo. Fiz um esqueleto com quadrad
 
 29/09/26 
 Hoje eu finalizei o mapa do meu jogo e aprendi como utilizar as prefabs para facilitar o desenvolvimento. Também adicionamos a programação de dano e os obstáculos, no meu jogo os obstáculos sao triangulos e estao na parte da floresta ate chegar na cabana.
+
+15/10/26
+Fizemos a tela de derrota com a mensagem "game over" e criamos o botão de reset, mas nao programamos para ela aparecer apenas quando o personagem morrer e nem a programação de resetar 
+
+
