@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public class MenuScene : MonoBehaviour
 {
     public GameObject painelPause;
-    public GameObject painelGameOver;
+    public GameObject painelGameOver;    
 
     bool pausado = false;
     bool jogoAcabou = false;
@@ -13,8 +13,8 @@ public class MenuScene : MonoBehaviour
     {
         painelPause.SetActive(false);
         painelGameOver.SetActive(false);
+        
     }
-
     
     void Update()
     {
@@ -66,4 +66,6 @@ public class MenuScene : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
+
+    
 }

@@ -1,3 +1,4 @@
+using System.Globalization;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,8 @@ public class PLAYER : MonoBehaviour
 
     private bool isGrounded = false;
 
+    public MenuScene menu;
+    public string Fase2;
 
     
     void Start()
@@ -39,8 +42,11 @@ public class PLAYER : MonoBehaviour
 
         if (collision.gameObject.CompareTag("dano")) 
         {
-            SceneManager.LoadScene(0); // vai fazer o player voltar para o inicio apos tocar o inimigo
+            menu.MostrarGameOver();
         }
+
+        
+
 
      } 
 
@@ -52,6 +58,12 @@ public class PLAYER : MonoBehaviour
             isGrounded = false; //vai reconhecer quando o jogador nao estiver encostando no chao
         }
      }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       
+    }
+
 
 
 
