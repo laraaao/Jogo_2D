@@ -40,7 +40,7 @@ public class PLAYER : MonoBehaviour
             isGrounded = true; // vai reconhecer quando o jogador estiver encostando no chao
         }
 
-        if (collision.gameObject.CompareTag("dano")) 
+        if (collision.gameObject.CompareTag("dano")) //reconhece quando o jogador toca um obstaculo e mostra a tela de game over
         {
             menu.MostrarGameOver();
         }
@@ -59,12 +59,6 @@ public class PLAYER : MonoBehaviour
         }
      }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-       
-    }
-
-
-
+  
 
 }

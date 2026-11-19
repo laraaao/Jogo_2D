@@ -5,8 +5,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movimento")]
     public float velocidade = 5f;
 
-    [Header("Pulo")]
-    public float forcaDoPulo = 10f;
+    
 
     [Header("Dash")]
     public float velocidadeDash = 15f;
@@ -15,9 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    // Pulo duplo
-    private bool puloDuploAtivo = false;
-    private int pulosRestantes = 0;
+    
 
     // Dash
     private bool podeDash = true;
@@ -32,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Movimentar();
-        Pular();
+       
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -60,38 +57,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Pular()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Primeiro pulo
-            if (EstaNoChao())
-            {
-                rb.linearVelocity = new Vector2(
-                    rb.linearVelocity.x,
-                    forcaDoPulo
-                );
-
-                if (puloDuploAtivo)
-                {
-                    pulosRestantes = 1;
-                }
-            }
-
-            // Segundo pulo
-            else if (puloDuploAtivo && pulosRestantes > 0)
-            {
-                rb.linearVelocity = new Vector2(
-                    rb.linearVelocity.x,
-                    forcaDoPulo
-                );
-
-                pulosRestantes--;
-
-                Debug.Log("Segundo pulo!");
-            }
-        }
-    }
+    
 
     private bool EstaNoChao()
     {
@@ -141,16 +107,6 @@ public class PlayerController : MonoBehaviour
 
         podeDash = true;
     }
-
-    public void AtivarPuloDuplo()
-    {
-        puloDuploAtivo = true;
-        pulosRestantes = 1;
-    }
-
-    public void DesativarPuloDuplo()
-    {
-        puloDuploAtivo = false;
-        pulosRestantes = 0;
-    }
+     
+    
 }
